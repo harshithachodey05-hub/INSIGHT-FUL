@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/insightful';
+console.log('🔍 MONGO_URI:', MONGO_URI ? MONGO_URI.replace(/:([^@]+)@/, ':<hidden>@') : 'NOT SET');
 
 // Connect to MongoDB and start server
 async function startServer() {
